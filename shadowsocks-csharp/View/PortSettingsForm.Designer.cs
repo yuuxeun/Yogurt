@@ -74,7 +74,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(684, 345);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(684, 325);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // listPorts
@@ -308,7 +308,7 @@
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(144, 81);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(144, 54);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // Add
@@ -316,7 +316,7 @@
             this.Add.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Add.Location = new System.Drawing.Point(22, 3);
             this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(100, 34);
+            this.Add.Size = new System.Drawing.Size(100, 21);
             this.Add.TabIndex = 1;
             this.Add.Text = "&Add";
             this.Add.UseVisualStyleBackColor = true;
@@ -325,9 +325,9 @@
             // Del
             // 
             this.Del.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Del.Location = new System.Drawing.Point(22, 43);
+            this.Del.Location = new System.Drawing.Point(22, 30);
             this.Del.Name = "Del";
-            this.Del.Size = new System.Drawing.Size(100, 35);
+            this.Del.Size = new System.Drawing.Size(100, 21);
             this.Del.TabIndex = 2;
             this.Del.Text = "&Delete";
             this.Del.UseVisualStyleBackColor = true;
@@ -338,7 +338,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(699, 361);
+            this.ClientSize = new System.Drawing.Size(727, 489);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "PortSettingsForm";

@@ -33,8 +33,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxURL = new System.Windows.Forms.TextBox();
             this.textBoxGroup = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textUpdate = new System.Windows.Forms.TextBox();
             this.checkBoxAutoUpdate = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonOK = new System.Windows.Forms.Button();
@@ -44,6 +42,8 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonDel = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textUpdate = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -105,24 +105,6 @@
             this.textBoxGroup.ReadOnly = true;
             this.textBoxGroup.Size = new System.Drawing.Size(186, 21);
             this.textBoxGroup.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 61);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 12);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Last Update";
-            // 
-            // textUpdate
-            // 
-            this.textUpdate.Location = new System.Drawing.Point(80, 57);
-            this.textUpdate.Name = "textUpdate";
-            this.textUpdate.ReadOnly = true;
-            this.textUpdate.Size = new System.Drawing.Size(186, 21);
-            this.textUpdate.TabIndex = 1;
             // 
             // checkBoxAutoUpdate
             // 
@@ -221,7 +203,7 @@
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(75, 23);
             this.buttonAdd.TabIndex = 0;
-            this.buttonAdd.Text = "&Add";
+            this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
@@ -232,9 +214,27 @@
             this.buttonDel.Name = "buttonDel";
             this.buttonDel.Size = new System.Drawing.Size(75, 23);
             this.buttonDel.TabIndex = 1;
-            this.buttonDel.Text = "&Delete";
+            this.buttonDel.Text = "Delete";
             this.buttonDel.UseVisualStyleBackColor = true;
             this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 61);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 12);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Last Update";
+            // 
+            // textUpdate
+            // 
+            this.textUpdate.Location = new System.Drawing.Point(80, 57);
+            this.textUpdate.Name = "textUpdate";
+            this.textUpdate.ReadOnly = true;
+            this.textUpdate.Size = new System.Drawing.Size(186, 21);
+            this.textUpdate.TabIndex = 1;
             // 
             // SubscribeForm
             // 
@@ -242,7 +242,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(659, 341);
+            this.ClientSize = new System.Drawing.Size(681, 364);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Name = "SubscribeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

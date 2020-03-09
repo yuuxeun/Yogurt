@@ -1,10 +1,13 @@
-﻿using Shadowsocks.Controller;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using Shadowsocks.Controller;
 using Shadowsocks.Model;
 using Shadowsocks.Properties;
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Windows.Forms;
 
 namespace Shadowsocks.View
 {
@@ -169,7 +172,7 @@ namespace Shadowsocks.View
                 PortMapConfig cfg = _modifiedConfiguration.portMap[key] as PortMapConfig;
 
                 cfg.enable = checkEnable.Checked;
-                cfg.type = (PortMapType)comboBoxType.SelectedValue;
+                cfg.type = (PortMapType) comboBoxType.SelectedValue;
                 cfg.id = GetID(comboServers.Text);
                 cfg.server_addr = textAddr.Text;
                 if (cfg.remarks != textRemarks.Text)
@@ -267,7 +270,7 @@ namespace Shadowsocks.View
             PortMapConfig cfg = _modifiedConfiguration.portMap[key] as PortMapConfig;
 
             cfg.enable = checkEnable.Checked;
-            cfg.type = (PortMapType)comboBoxType.SelectedValue;
+            cfg.type = (PortMapType) comboBoxType.SelectedValue;
             cfg.id = GetID(comboServers.Text);
             cfg.server_addr = textAddr.Text;
             cfg.remarks = textRemarks.Text;

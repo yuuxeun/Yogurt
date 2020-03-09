@@ -1,12 +1,14 @@
-﻿using Shadowsocks.Controller;
-using Shadowsocks.Model;
-using Shadowsocks.Properties;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using System.Drawing;
-using System.Threading;
+using System.Text;
 using System.Windows.Forms;
+using Shadowsocks.Controller;
+using Shadowsocks.Model;
+using Shadowsocks.Properties;
+using System.Threading;
 
 namespace Shadowsocks.View
 {
@@ -133,7 +135,7 @@ namespace Shadowsocks.View
         {
             this.Text = title_perfix + I18N.GetString("ServerLog") + "("
                 + (controller.GetCurrentConfiguration().shareOverLan ? "any" : "local") + ":" + controller.GetCurrentConfiguration().localPort.ToString()
-                + "(" + Model.Server.GetForwardServerRef().GetConnections().Count.ToString() + ")"
+                + "(" + Model.Server.GetForwardServerRef().GetConnections().Count.ToString()+ ")"
                 + " " + I18N.GetString("Version") + UpdateChecker.FullVersion
                 + ")";
         }
@@ -256,7 +258,7 @@ namespace Shadowsocks.View
             {
                 Configuration config = controller.GetCurrentConfiguration();
                 ServerSpeedLogShow[] _ServerSpeedLogList = new ServerSpeedLogShow[config.configs.Count];
-                for (int i = 0; i < config.configs.Count; ++i)
+                for (int i = 0; i < config.configs.Count && i < _ServerSpeedLogList.Length; ++i)
                 {
                     _ServerSpeedLogList[i] = config.configs[i].ServerSpeedLog().Translate();
                 }
@@ -769,12 +771,7 @@ namespace Shadowsocks.View
 
         private void Disconnect_Click(object sender, EventArgs e)
         {
-            Configuration config = controller.GetCurrentConfiguration();
-            for (int id = 0; id < config.configs.Count; ++id)
-            {
-                Server server = config.configs[id];
-                server.GetConnections().CloseAll();
-            }
+            controller.DisconnectAllConnections();
             Model.Server.GetForwardServerRef().GetConnections().CloseAll();
         }
 
@@ -909,6 +906,11 @@ namespace Shadowsocks.View
                 if (ServerDataGrid.Columns[e.ColumnIndex].Name == "Server")
                 {
                     Configuration config = controller.GetCurrentConfiguration();
+                    Console.WriteLine("config.checkSwitchAutoCloseAll:" + config.checkSwitchAutoCloseAll);
+                    if (config.checkSwitchAutoCloseAll)
+                    {
+                        controller.DisconnectAllConnections();
+                    }
                     controller.SelectServerIndex(id);
                 }
                 if (ServerDataGrid.Columns[e.ColumnIndex].Name == "Group")

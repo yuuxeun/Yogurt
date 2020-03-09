@@ -1,8 +1,12 @@
-﻿using Shadowsocks.Controller;
-using Shadowsocks.Properties;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
+using System.Text;
 using System.Windows.Forms;
+using Shadowsocks.Properties;
+using Shadowsocks.Controller;
 
 namespace Shadowsocks.View
 {
