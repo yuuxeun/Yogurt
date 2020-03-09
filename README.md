@@ -16,7 +16,7 @@ VS2019重新编译
 
 ### `环境`
 
-.Net 4.0+
+.Net 4.7.2+
 
 无[360/2345/百度]全家桶请使用[Akkariiin](https://github.com/Anankke/SSRR-Windows)
 
